@@ -10,8 +10,9 @@ do
         docker image rm $i
         echo "------------"
 done
-~                                                                                                                                                                                                            
-~            ~                                                                                                                                                                                                            
+
+docker image rm -f $(docker image ls | grep  none | awk '{print $3}')                                                                                                                                                                                                     
+~                                                                                                                                                                                                                        
 ~                                                                                                                                                                                                            
 ~                                                                                                                                                                                                            
 ~                                                                                 
