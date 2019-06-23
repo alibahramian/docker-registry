@@ -1,0 +1,22 @@
+#!bin/bash
+
+
+echo image name:
+
+read image
+
+docker pull $image
+
+docker tag $image YOURDOMAIN/$image
+docker push YOURDOMAIN/$image
+
+docker image rm $image
+
+echo "
+* * * * * * * * * * * * * * * * * * *
+
+image upload to registry successfully
+
+* * * * * * * * * * * * * * * * * * *
+"
+

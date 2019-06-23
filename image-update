@@ -1,0 +1,17 @@
+#!/bin/bash
+
+image=$(docker images |grep -v REPOSITORY|awk '{print $1}' | sed 's+YOURDOMAIN/++g')
+for i in $image
+do
+        echo $i
+        docker pull $i
+        docker tag $i YOURDOMAIN/$i
+        docker push YOYRDOMAIN/$i
+        docker image rm $i
+        echo "------------"
+done
+~                                                                                                                                                                                                            
+~            ~                                                                                                                                                                                                            
+~                                                                                                                                                                                                            
+~                                                                                                                                                                                                            
+~                                                                                 
